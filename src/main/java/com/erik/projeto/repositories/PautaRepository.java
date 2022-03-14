@@ -6,7 +6,7 @@ import com.erik.projeto.entities.Pauta;
 
 
 public interface PautaRepository extends JpaRepository<Pauta, Long> {
-	
+
 
     @Query("select count(*) from Pauta")
     public int buscaTotalDeLinhasDaTabela();
@@ -15,7 +15,9 @@ public interface PautaRepository extends JpaRepository<Pauta, Long> {
 	public Pauta findById( long id );
 	
 	
-    //Consultar por todas as Pautas com nome que comecarem com a string passada no parametro, ignorando maisculas e minusculas.
-    List<Pauta> findByNomeStartingWithIgnoreCase(String nome);    
+    List<Pauta> findByNomeStartingWithIgnoreCase(String nome);
+
+
+	//public Pauta save( Pauta pauta );
 
 }
