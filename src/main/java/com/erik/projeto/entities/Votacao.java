@@ -1,7 +1,6 @@
 package com.erik.projeto.entities;
 import java.io.Serializable;
-import java.util.Calendar;
-
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,23 +20,23 @@ public class Votacao implements Serializable {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 		
-	@Column(name = "dataHoraCriacao", nullable = false)
-	private Calendar dataHoraCriacao;
+	@Column(name = "datahoracriacao", nullable = false)
+	private Date dataHoraCriacao;
 	
 	
 	@Column(name = "tempoDeDuracao", nullable = false)
-	private Calendar tempoDeDuracao;	
+	private long tempoDeDuracao;	
 	
 	
 	@Column(name = "dataHoraAbertura")
-	private Calendar dataHoraAbertura;
+	private Date dataHoraAbertura;
 	
 	
 	@Column(name = "dataHoraFechamento")
-	private Calendar dataHoraFechamento;	
+	private Date dataHoraFechamento;	
 	
 	
-	@Column(name = "status")
+	@Column(name = "status", nullable = false)
 	private String status;		
 	
 
@@ -61,38 +60,38 @@ public class Votacao implements Serializable {
 	}
 
 
-	public Calendar getDataHoraCriacao() {
+	public Date getDataHoraCriacao() {
 		return dataHoraCriacao;
 	}
 
-	public void setDataHoraCriacao(Calendar dataHoraCriacao) {
+	public void setDataHoraCriacao(Date dataHoraCriacao) {
 		this.dataHoraCriacao = dataHoraCriacao;
 	}
 
 
-	public Calendar getTempoDeDuracao() {
+	public long getTempoDeDuracao() {
 		return tempoDeDuracao;
 	}
 
-	public void setTempoDeDuracao(Calendar tempoDeDuracao) {
+	public void setTempoDeDuracao(long tempoDeDuracao) {
 		this.tempoDeDuracao = tempoDeDuracao;
 	}
 
 
-	public Calendar getDataHoraAbertura() {
+	public Date getDataHoraAbertura() {
 		return dataHoraAbertura;
 	}
 
-	public void setDataHoraAbertura(Calendar dataHoraAbertura) {
+	public void setDataHoraAbertura(Date dataHoraAbertura) {
 		this.dataHoraAbertura = dataHoraAbertura;
 	}
 
 
-	public Calendar getDataHoraFechamento() {
+	public Date getDataHoraFechamento() {
 		return dataHoraFechamento;
 	}
 
-	public void setDataHoraFechamento(Calendar dataHoraFechamento) {
+	public void setDataHoraFechamento(Date dataHoraFechamento) {
 		this.dataHoraFechamento = dataHoraFechamento;
 	}
 

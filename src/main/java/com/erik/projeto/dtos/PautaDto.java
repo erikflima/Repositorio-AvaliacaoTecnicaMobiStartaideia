@@ -2,7 +2,7 @@ package com.erik.projeto.dtos;
 import javax.validation.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Length;
 
-public class CadastroPautaDto {
+public class PautaDto {
 		
 	@NotEmpty(message = "O campo nome não pode ser vazio.")
 	@Length(min = 3, max = 45, message = "Nome deve conter entre 3 e 45 caracteres.")
@@ -13,7 +13,7 @@ public class CadastroPautaDto {
 	private String descricao;
 
 	
-	public CadastroPautaDto() {
+	public PautaDto() {
 	}
 
 	//-------------------------Getters and Setters----------------------//	

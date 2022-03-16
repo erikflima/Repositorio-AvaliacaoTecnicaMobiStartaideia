@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
+
+import com.erik.projeto.entities.Votacao;
 import com.erik.projeto.response.ResponsePadronizado;
 
 
@@ -58,8 +60,7 @@ public class ValidadorDeParametrosDeEntrada {
 		
 		//Não foram encontrados erros de validação.
 		return false;
-	}	
+	}
 
-	
 
 }

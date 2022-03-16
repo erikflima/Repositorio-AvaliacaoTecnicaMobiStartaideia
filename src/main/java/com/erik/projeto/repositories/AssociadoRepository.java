@@ -17,8 +17,7 @@ public interface AssociadoRepository extends JpaRepository<Associado, Long> {
 	
 	public Associado findByCpf( String cpf );
  
-    
-    //Consultar por todos os associados com nome que comecarem com a string passada no parametro, ignorando maisculas e minusculas.
+ 
     List<Associado> findByNomeStartingWithIgnoreCase(String nome);    
 
 }

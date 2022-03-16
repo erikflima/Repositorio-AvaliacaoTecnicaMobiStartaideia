@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.erik.projeto.dtos.CadastroPautaDto;
+import com.erik.projeto.dtos.PautaDto;
 import com.erik.projeto.entities.Pauta;
 import com.erik.projeto.response.ResponsePadronizado;
 import com.erik.projeto.services.PautaService;
@@ -35,7 +35,7 @@ public class PautaController {
 
 	
 	@PostMapping(value = "/cadastrar")
-	public ResponseEntity< ResponsePadronizado<Pauta> > cadastrar( @Valid @RequestBody CadastroPautaDto cadastroPautaDto,
+	public ResponseEntity< ResponsePadronizado<Pauta> > cadastrar( @Valid @RequestBody PautaDto cadastroPautaDto,
 			                                                                           BindingResult resultadoDaValidacao ) throws NoSuchAlgorithmException {
 
 		log.info("Cadastrando a Pauta: ", cadastroPautaDto.getNome() );
